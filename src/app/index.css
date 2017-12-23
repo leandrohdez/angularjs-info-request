@@ -1,0 +1,23 @@
+body {
+    font-family: Helvetica;
+}
+
+.container {
+    max-width: 670px;
+}
+
+.page-title {
+    text-align: center;
+    margin: 40px 0 30px 0;
+    font-weight: 700;
+}
+
+.ip-address{
+    text-align: center;
+}
+
+.row-divisor {
+    height: 20px;
+    border-bottom: 1px solid #777;
+    margin-bottom: 20px;
+}
