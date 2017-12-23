@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    max-width: 670px;
+    max-width: 620px;
 }
 
 .page-title {
@@ -22,6 +22,15 @@ body {
     margin-bottom: 20px;
 }
 
+.row-separator {
+    height: 30px;
+}
+
 .box {
     border: 1px solid #777;
+    padding: 20px 10px;
+}
+
+.browser-name {
+    font-size: 28px;
 }
