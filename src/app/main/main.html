@@ -1,4 +1,5 @@
-<div class="container">
+
+<div class="container" ng-init="ctrl.onLoaded()">
     <div class="row">
         <div class="col-md-12">
             <div class="page-title">
@@ -10,7 +11,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="ip-address">
-                <h2>192.168.90.200</h2>
+                <h2>{{ ctrl.geodata.ip }}</h2>
                 <div>your ip address</div>
             </div>
         </div>
@@ -20,15 +21,17 @@
 
     <div class="row">
         <div class="col-md-5">
-            <img src="http://via.placeholder.com/400x400" alt="" class="img-thumbnail">
+            <img ng-src="{{ ctrl.geomap }}" alt="" class="img-thumbnail">
         </div>
         <div class="col-md-7">
             <div class="address-data">
-                <div class="title">Address data</div>
+                <div class="title">Información de localización</div>
                 <div class="info">
-                    <p>Calle Alcalá 123. 12345.</p>
-                    <p>Madrid. España.</p>
-                    <p>Moneda de la región:  EUR (€) - ISO 901</p>
+                    <p>Ubicación: {{ ctrl.geodata.latitude }}, {{ ctrl.geodata.longitude }}</p>
+                    <p>{{ ctrl.geodata.city }}, {{ ctrl.geodata.region }}</p>
+                    <p>Pais: {{ ctrl.geodata.country }}.</p>
+                    <p>Continente: {{ ctrl.geodata.continent }}.</p>
+                    <p>Moneda:  {{ ctrl.geodata.currency_code }} ({{ ctrl.geodata.currency_symbol }})</p>
                 </div>
             </div>
         </div>
@@ -41,10 +44,10 @@
             <div class="box browser-info">
                 <div class="row">
                     <div class="col-md-3 col-sm-4" align="center">
-                        <img src="http://via.placeholder.com/70x70" alt="">
+                        <img ng-src="{{ ctrl.browser.icon }}" alt="" class="browser-icon">
                     </div>
                     <div class="col-md-9 col-sm-8">
-                        <div class="browser-name">Google Chrome</div>
+                        <div class="browser-name">{{ ctrl.browser.name }}</div>
                         <div>version 39.x.x.x</div>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus vero dolorem a vitae ipsa obcaecati repudiandae, sapiente rerum, facere explicabo, cumque alias? Esse totam quas eos pariatur, tenetur nostrum nihil?
                     </div>

@@ -34,3 +34,8 @@ body {
 .browser-name {
     font-size: 28px;
 }
+
+.browser-icon{
+    max-width: 70px;
+    margin-top: 4px;
+}
